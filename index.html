@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>As Above, So Below — A Chronology of Hermetic Philosophy, Magic &amp; the Occult</title>
+<meta name="description" content="A sourced timeline tracing Hermetic philosophy and magic from the Hellenistic Hermetica through Arabic transmission, Renaissance translation, John Dee, the grimoire tradition, and the modern occult revival — with documented history and conspiracy claims clearly labelled." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0E1322;
+    --ink-2:#141B30;
+    --ink-3:#1B2342;
+    --gold:#C9A24B;
+    --gold-bright:#E6C76E;
+    --parch:#E8E1CF;
+    --muted:#969CB4;
+    --line:rgba(201,162,75,.30);
+    --rule:rgba(232,225,207,.10);
+    /* epistemic status colours */
+    --st-doc:#D8B868;   /* documented  — gold */
+    --st-disp:#8FA6CE;  /* disputed    — slate blue */
+    --st-deb:#D9745F;   /* debunked    — rubric red */
+    --st-con:#D79E56;   /* conspiracy  — amber/ember */
+    --maxw:1080px;
+    --serif:"EB Garamond",Georgia,"Times New Roman",serif;
+    --display:"Cormorant Garamond",Georgia,serif;
+    --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 700px at 78% -8%, rgba(201,162,75,.07), transparent 60%),
+      radial-gradient(900px 600px at 0% 12%, rgba(143,166,206,.06), transparent 55%),
+      var(--ink);
+    color:var(--parch);
+    font-family:var(--serif);
+    font-size:18px;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--gold-bright);text-decoration:none;border-bottom:1px solid rgba(230,199,110,.35);}
+  a:hover{border-bottom-color:var(--gold-bright);}
+  :focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;border-radius:2px;}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+
+  /* ---------- top bar ---------- */
+  .topbar{
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+    padding:18px 24px;border-bottom:1px solid var(--rule);
+    font-family:var(--mono);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
+    position:sticky;top:0;z-index:30;
+    background:rgba(14,19,34,.82);backdrop-filter:blur(8px);
+  }
+  .topbar .brand{color:var(--gold);}
+  .topnav{display:flex;gap:22px;}
+  .topnav a{color:var(--muted);border-bottom:none;letter-spacing:.16em;transition:color .15s ease;}
+  .topnav a:hover{color:var(--gold-bright);}
+
+  /* ---------- hero ---------- */
+  .hero{padding:62px 0 30px;text-align:center;}
+  .emblem{width:78px;height:auto;display:block;margin:0 auto 26px;}
+  .emblem path,.emblem line,.emblem circle{stroke:var(--gold);stroke-width:2.1;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+  .emblem .dot{fill:var(--gold-bright);stroke:none;}
+  .eyebrow{
+    font-family:var(--mono);font-size:11.5px;letter-spacing:.34em;text-transform:uppercase;
+    color:var(--gold);margin-bottom:22px;
+  }
+  .maxim{
+    font-family:var(--display);font-weight:600;font-style:italic;
+    font-size:clamp(44px,9vw,92px);line-height:.96;letter-spacing:.005em;
+    margin:0 0 8px;color:var(--parch);
+  }
+  .maxim .b{display:block;color:var(--gold-bright);font-style:normal;}
+  .hero-sub{
+    font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--muted);margin:18px 0 26px;
+  }
+  .lede{max-width:62ch;margin:0 auto;color:#CFC8B6;font-size:19px;}
+  .lede em{color:var(--gold-bright);font-style:italic;}
+
+  /* ---------- legend ---------- */
+  .legend{
+    max-width:var(--maxw);margin:42px auto 0;padding:22px 24px;
+    border:1px solid var(--rule);border-radius:10px;background:rgba(20,27,48,.5);
+  }
+  .legend h2{
+    font-family:var(--mono);font-size:11px;letter-spacing:.26em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 16px;font-weight:500;
+  }
+  .legend-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .leg-item{display:flex;gap:11px;align-items:flex-start;}
+  .leg-mark{width:13px;height:13px;border-radius:50%;flex:0 0 auto;margin-top:5px;}
+  .leg-mark.doc{background:var(--st-doc);transform:rotate(45deg);border-radius:2px;}
+  .leg-mark.disp{background:transparent;border:2px solid var(--st-disp);}
+  .leg-mark.deb{background:var(--st-deb);}
+  .leg-mark.con{background:transparent;border:2px solid var(--st-con);position:relative;}
+  .leg-name{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:2px;}
+  .leg-name.doc{color:var(--st-doc);}
+  .leg-name.disp{color:var(--st-disp);}
+  .leg-name.deb{color:var(--st-deb);}
+  .leg-name.con{color:var(--st-con);}
+  .leg-desc{font-size:15px;color:var(--muted);line-height:1.45;}
+
+  /* ---------- controls ---------- */
+  .controls{
+    max-width:var(--maxw);margin:26px auto 0;padding:0 24px;
+    display:flex;flex-wrap:wrap;gap:14px 20px;align-items:center;
+    position:sticky;top:55px;z-index:20;
+  }
+  .controls-inner{
+    width:100%;display:flex;flex-wrap:wrap;gap:12px 16px;align-items:center;
+    background:rgba(14,19,34,.9);backdrop-filter:blur(8px);
+    border:1px solid var(--rule);border-radius:12px;padding:14px 16px;
+  }
+  .search{
+    flex:1 1 240px;display:flex;align-items:center;gap:9px;
+    background:var(--ink-2);border:1px solid var(--rule);border-radius:8px;padding:9px 12px;
+  }
+  .search svg{flex:0 0 auto;stroke:var(--muted);}
+  .search input{
+    flex:1;background:transparent;border:none;color:var(--parch);
+    font-family:var(--serif);font-size:16px;outline:none;
+  }
+  .search input::placeholder{color:var(--muted);}
+  .field{display:flex;align-items:center;gap:8px;}
+  .field label{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);}
+  select{
+    font-family:var(--mono);font-size:12px;color:var(--parch);background:var(--ink-2);
+    border:1px solid var(--rule);border-radius:8px;padding:8px 10px;cursor:pointer;
+  }
+  .chips{display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+    background:var(--ink-2);border:1px solid var(--rule);color:var(--muted);
+    padding:7px 11px;border-radius:999px;cursor:pointer;transition:all .15s ease;
+    display:inline-flex;align-items:center;gap:7px;
+  }
+  .chip .swatch{width:9px;height:9px;border-radius:50%;}
+  .chip[data-k="documented"] .swatch{background:var(--st-doc);}
+  .chip[data-k="disputed"] .swatch{background:var(--st-disp);}
+  .chip[data-k="debunked"] .swatch{background:var(--st-deb);}
+  .chip[data-k="conspiracy"] .swatch{background:var(--st-con);}
+  .chip.off{opacity:.4;}
+  .chip[aria-pressed="true"]{border-color:rgba(201,162,75,.45);color:var(--parch);background:var(--ink-3);}
+  .reset{
+    font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--gold);background:none;border:none;cursor:pointer;padding:6px 4px;
+  }
+  .reset:hover{color:var(--gold-bright);}
+  .count{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--muted);margin-left:auto;}
+
+  /* ---------- timeline ---------- */
+  .timeline{position:relative;max-width:var(--maxw);margin:38px auto 0;padding:8px 24px 40px;}
+  .tl-inner{position:relative;}
+  .tl-inner::before{
+    content:"";position:absolute;left:7px;top:6px;bottom:0;width:2px;
+    background:linear-gradient(180deg,transparent,var(--gold) 4%,var(--line) 40%,var(--line) 86%,transparent);
+  }
+
+  .era{position:relative;padding:30px 0 14px 44px;}
+  .era::before{
+    content:"";position:absolute;left:0;top:38px;width:16px;height:16px;border-radius:50%;
+    background:var(--ink);border:2px solid var(--gold);box-shadow:0 0 0 4px var(--ink),0 0 14px rgba(201,162,75,.4);
+  }
+  .era-name{font-family:var(--display);font-weight:600;font-size:27px;color:var(--gold-bright);line-height:1.1;margin:0;}
+  .era-range{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:5px;}
+
+  .entry{position:relative;padding:13px 0 13px 44px;}
+  .entry::before{
+    content:"";position:absolute;left:2px;top:24px;width:13px;height:13px;border-radius:50%;
+    background:var(--muted);box-shadow:0 0 0 4px var(--ink);transition:transform .18s ease;
+  }
+  .entry[data-k="documented"]::before{background:var(--st-doc);transform:rotate(45deg);border-radius:2px;left:2px;}
+  .entry[data-k="disputed"]::before{background:var(--ink);border:2px solid var(--st-disp);}
+  .entry[data-k="debunked"]::before{background:var(--st-deb);}
+  .entry[data-k="conspiracy"]::before{background:var(--ink);border:2px solid var(--st-con);}
+  .entry:hover::before{transform:scale(1.35);}
+  .entry[data-k="documented"]:hover::before{transform:rotate(45deg) scale(1.3);}
+
+  .card{
+    border:1px solid var(--rule);border-radius:11px;background:rgba(20,27,48,.46);
+    padding:18px 20px;transition:border-color .2s ease,background .2s ease,transform .2s ease;
+  }
+  .entry:hover .card{border-color:rgba(201,162,75,.34);background:rgba(27,35,66,.6);}
+  .card-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:8px;}
+  .yr{font-family:var(--mono);font-weight:600;font-size:14px;letter-spacing:.04em;color:var(--gold);white-space:nowrap;}
+  .tag{
+    font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
+    padding:3px 8px;border-radius:999px;border:1px solid;
+  }
+  .tag.doc{color:var(--st-doc);border-color:rgba(216,184,104,.4);background:rgba(216,184,104,.08);}
+  .tag.disp{color:var(--st-disp);border-color:rgba(143,166,206,.4);background:rgba(143,166,206,.08);}
+  .tag.deb{color:var(--st-deb);border-color:rgba(217,116,95,.4);background:rgba(217,116,95,.08);}
+  .tag.con{color:var(--st-con);border-color:rgba(215,158,86,.4);background:rgba(215,158,86,.08);}
+  .card h3{font-family:var(--display);font-weight:600;font-size:23px;line-height:1.18;margin:0 0 7px;color:var(--parch);}
+  .card p{margin:0 0 11px;font-size:17px;color:#D5CEBC;}
+  .src{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--muted);line-height:1.5;}
+  .src::before{content:"⌖ ";color:var(--gold);}
+
+  .empty{padding:46px 44px;color:var(--muted);font-size:17px;}
+  .empty b{color:var(--parch);font-weight:500;}
+
+  /* reveal animation (only when JS present & motion allowed) */
+  .js .entry,.js .era{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease;}
+  .js .entry.in-view,.js .era.in-view{opacity:1;transform:none;}
+
+  /* ---------- practices ---------- */
+  .practices{border-top:1px solid var(--rule);margin-top:30px;padding:56px 0 8px;}
+  .sec-head h2{font-family:var(--display);font-weight:600;font-size:clamp(30px,5vw,40px);color:var(--gold-bright);margin:0 0 6px;line-height:1.05;}
+  .sec-head .sub{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:24px;}
+  .callout{
+    border:1px solid rgba(217,116,95,.35);border-left:3px solid var(--st-deb);
+    background:rgba(217,116,95,.06);border-radius:8px;padding:18px 20px;margin:0 0 34px;
+    font-size:16px;color:#DAD3C1;line-height:1.55;max-width:74ch;
+  }
+  .callout b{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--st-deb);display:block;margin-bottom:8px;font-weight:600;}
+  .callout em{color:var(--gold-bright);font-style:italic;}
+  .practice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+  .pcard{border:1px solid var(--rule);border-radius:12px;background:rgba(20,27,48,.46);padding:22px 22px 20px;display:flex;flex-direction:column;}
+  .pcard:hover{border-color:rgba(201,162,75,.3);}
+  .pc-top{display:flex;align-items:baseline;gap:12px;margin-bottom:4px;}
+  .pc-num{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--gold);letter-spacing:.08em;}
+  .pc-origin{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-left:auto;text-align:right;}
+  .pcard h3{font-family:var(--display);font-weight:600;font-size:24px;line-height:1.12;margin:2px 0 12px;color:var(--parch);}
+  .pc-label{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:14px 0 7px;}
+  .pc-steps{margin:0 0 6px;padding-left:18px;}
+  .pc-steps li{font-size:15.5px;color:#D5CEBC;line-height:1.5;margin-bottom:6px;}
+  .pcard p{font-size:16px;color:#D5CEBC;line-height:1.55;margin:0 0 6px;}
+  .pc-does{font-size:15.5px;color:#CFC8B6;line-height:1.55;margin:0;}
+  .pc-does .h{color:var(--st-disp);font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:5px;}
+  .pc-src{font-family:var(--mono);font-size:10.5px;color:var(--muted);margin-top:14px;padding-top:12px;border-top:1px solid var(--rule);line-height:1.5;}
+  .pc-src::before{content:"⌖ ";color:var(--gold);}
+
+  /* library tier tags */
+  .tier{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:2px 7px;border-radius:999px;border:1px solid;margin-left:8px;vertical-align:middle;white-space:nowrap;}
+  .tier.sch{color:var(--st-doc);border-color:rgba(216,184,104,.4);}
+  .tier.jrn{color:var(--st-disp);border-color:rgba(143,166,206,.4);}
+  .tier.web{color:var(--st-con);border-color:rgba(215,158,86,.4);}
+
+  /* ---------- references ---------- */
+  .refs{border-top:1px solid var(--rule);margin-top:30px;padding:54px 0 20px;}
+  .refs h2{font-family:var(--display);font-weight:600;font-size:30px;color:var(--gold-bright);margin:0 0 6px;}
+  .refs .sub{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:28px;}
+  .ref-block{margin-bottom:30px;}
+  .ref-block h3{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 14px;font-weight:500;}
+  .ref-list{list-style:none;margin:0;padding:0;display:grid;gap:11px;}
+  .ref-list li{padding-left:18px;position:relative;font-size:16px;color:#D5CEBC;line-height:1.5;}
+  .ref-list li::before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;background:var(--gold);transform:rotate(45deg);}
+  .ref-list .meta{color:var(--muted);font-style:italic;}
+
+  /* ---------- footer ---------- */
+  footer{border-top:1px solid var(--rule);padding:38px 0 60px;}
+  .foot-note{max-width:74ch;color:var(--muted);font-size:15.5px;line-height:1.6;}
+  .foot-note strong{color:var(--parch);font-weight:500;}
+  .foot-meta{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:22px;}
+
+  @media (max-width:720px){
+    body{font-size:17px;}
+    .legend-grid{grid-template-columns:1fr 1fr;gap:16px;}
+    .controls{top:51px;}
+    .count{margin-left:0;width:100%;}
+    .card h3{font-size:21px;}
+    .era-name{font-size:23px;}
+    .practice-grid{grid-template-columns:1fr;}
+    .topbar{flex-wrap:wrap;gap:10px 16px;}
+    .topnav{gap:18px;}
+  }
+  @media (max-width:440px){
+    .legend-grid{grid-template-columns:1fr;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .js .entry,.js .era{opacity:1;transform:none;transition:none;}
+    .entry:hover::before,.card{transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="brand">✦ The Hermetic Chronology</span>
+  <nav class="topnav" aria-label="Section navigation">
+    <a href="#timeline-start">Timeline</a>
+    <a href="#practices">Practices</a>
+    <a href="#library">Library</a>
+  </nav>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <svg class="emblem" viewBox="0 0 120 178" role="img" aria-label="Stylised Monas Hieroglyphica emblem">
+      <!-- crescent (moon) -->
+      <path d="M38 48 A23 17 0 0 1 82 48" />
+      <!-- sun -->
+      <circle cx="60" cy="71" r="20" />
+      <circle class="dot" cx="60" cy="71" r="2.8" />
+      <!-- cross -->
+      <line x1="60" y1="91" x2="60" y2="139" />
+      <line x1="43" y1="116" x2="77" y2="116" />
+      <!-- aries / horns -->
+      <path d="M60 139 C 49 139 45 151 53 160" />
+      <path d="M60 139 C 71 139 75 151 67 160" />
+    </svg>
+    <div class="eyebrow">A Chronology of Hermetic Philosophy, Magic &amp; the Occult</div>
+    <h1 class="maxim">As above,<span class="b">so below.</span></h1>
+    <div class="hero-sub">From Babylon and Egypt to the academy · transmission, translation &amp; the line between record and rumour</div>
+    <p class="lede">
+      The maxim above, paraphrased from the <em>Emerald Tablet</em>, became the signature of a tradition that crossed
+      languages and empires — from the star-priests of Babylon and the scribes of Egypt, through Roman Alexandria and the
+      Arabic translators of Harran, to Ficino's Florence, John Dee's angelic tables, and the magical orders of the modern
+      age. This timeline follows that documented thread, and marks where popular history shades into <em>conspiracy</em>.
+    </p>
+  </div>
+</header>
+
+<section class="legend" aria-label="How claims are labelled">
+  <h2>How each entry is labelled</h2>
+  <div class="legend-grid">
+    <div class="leg-item"><span class="leg-mark doc"></span><span><span class="leg-name doc">Documented</span><span class="leg-desc">Established by primary texts or peer-reviewed scholarship.</span></span></div>
+    <div class="leg-item"><span class="leg-mark disp"></span><span><span class="leg-name disp">Disputed</span><span class="leg-desc">Contested among scholars, or popular but not settled.</span></span></div>
+    <div class="leg-item"><span class="leg-mark deb"></span><span><span class="leg-name deb">Debunked</span><span class="leg-desc">A specific claim disproven by verifiable evidence.</span></span></div>
+    <div class="leg-item"><span class="leg-mark con"></span><span><span class="leg-name con">Conspiracy</span><span class="leg-desc">No evidentiary basis; shown as discourse, not fact.</span></span></div>
+  </div>
+</section>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+      <input id="q" type="search" placeholder="Search people, texts, places…" aria-label="Search entries" />
+    </div>
+    <div class="field">
+      <label for="era">Era</label>
+      <select id="era" aria-label="Filter by era"><option value="all">All eras</option></select>
+    </div>
+    <div class="chips" id="chips" role="group" aria-label="Filter by status">
+      <button class="chip" data-k="documented" aria-pressed="true"><span class="swatch"></span>Documented</button>
+      <button class="chip" data-k="disputed" aria-pressed="true"><span class="swatch"></span>Disputed</button>
+      <button class="chip" data-k="debunked" aria-pressed="true"><span class="swatch"></span>Debunked</button>
+      <button class="chip" data-k="conspiracy" aria-pressed="true"><span class="swatch"></span>Conspiracy</button>
+    </div>
+    <button class="reset" id="reset">Reset</button>
+    <span class="count" id="count"></span>
+  </div>
+</div>
+
+<main class="timeline" id="timeline-start">
+  <div class="tl-inner" id="tl"></div>
+</main>
+
+<section class="practices" id="practices">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Starter practices from the tradition</h2>
+      <div class="sub">Foundational rituals a beginner historically learns first — described accurately, framed honestly</div>
+    </div>
+
+    <div class="callout">
+      <b>On “100% effective”</b>
+      These are the genuine entry-level rites of Western ceremonial magic, drawn from published sources. What they
+      <em>reliably</em> do is documented and real: they focus attention, steady the nervous system, induce a calm or
+      mildly altered state, and give shape to an intention — the same mechanisms studied in research on meditation,
+      ritual, and expectancy. Their <em>supernatural</em> efficacy is not something evidence can establish, so nothing
+      here is promised to work as magic. Read this as a practitioner's starter set and a piece of living history, not as
+      a guaranteed cause-and-effect. All five are gentle and safe; none is a substitute for medical or mental-health care.
+    </div>
+
+    <div class="practice-grid">
+
+      <div class="pcard">
+        <div class="pc-top"><span class="pc-num">00</span><span class="pc-origin">Universal · “step zero”</span></div>
+        <h3>Grounding &amp; centering</h3>
+        <p>Before any rite, practitioners settle the body and breath. Sit upright, relax each part of the body in turn,
+        and breathe slowly — a common pattern is a four-count in, four-count hold, four-count out — until attention
+        rests in the present.</p>
+        <div class="pc-does"><span class="h">What it actually does</span>Slow, paced breathing engages the
+        parasympathetic “rest” response, lowering arousal and sharpening focus. It is the contemplative baseline every
+        later practice is built on.</div>
+        <div class="pc-src">Standard across contemplative traditions; cf. relaxation/meditation research.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="pc-top"><span class="pc-num">01</span><span class="pc-origin">Golden Dawn · 1888</span></div>
+        <h3>The Qabalistic Cross</h3>
+        <p>A short centering rite, structurally the Western cousin of crossing oneself, using Hebrew words mapped to the
+        Tree of Life:</p>
+        <ol class="pc-steps">
+          <li>Touch the forehead — <em>Ateh</em> (“unto Thee”).</li>
+          <li>Touch the chest — <em>Malkuth</em> (“the Kingdom”).</li>
+          <li>Touch the right shoulder — <em>ve-Geburah</em> (“and the Power”).</li>
+          <li>Touch the left shoulder — <em>ve-Gedulah</em> (“and the Glory”).</li>
+          <li>Clasp the hands at the chest — <em>le-Olahm, Amen</em> (“to the ages, Amen”).</li>
+        </ol>
+        <div class="pc-does"><span class="h">What it actually does</span>Pairs breath, gesture, and spoken word to
+        mark a clear “beginning,” drawing attention inward and establishing a felt center.</div>
+        <div class="pc-src">Israel Regardie, The Golden Dawn; Crowley, Liber O.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="pc-top"><span class="pc-num">02</span><span class="pc-origin">Golden Dawn · 1888</span></div>
+        <h3>Lesser Banishing Ritual of the Pentagram</h3>
+        <p>The cornerstone of the whole system, and the first full ritual a member learned. After the Qabalistic Cross:</p>
+        <ol class="pc-steps">
+          <li>Facing <em>east</em>, trace a pentagram in the air and intone <em>YHVH</em>.</li>
+          <li>Turn <em>south</em>, trace the pentagram, intone <em>Adonai</em>.</li>
+          <li>Turn <em>west</em>, trace it, intone <em>Eheieh</em>.</li>
+          <li>Turn <em>north</em>, trace it, intone <em>AGLA</em>; return to east to close the circle.</li>
+          <li>Arms outstretched: “Before me Raphael, behind me Gabriel, on my right Michael, on my left Auriel” — then repeat the Qabalistic Cross.</li>
+        </ol>
+        <div class="pc-does"><span class="h">What it actually does</span>Practitioners and sceptics alike describe it
+        as a “moving meditation”: the gestures and vibrated names work primarily on the mind, clearing distraction and
+        bounding a space for focused attention.</div>
+        <div class="pc-src">Regardie, The Golden Dawn; Kraig, Modern Magick.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="pc-top"><span class="pc-num">03</span><span class="pc-origin">Regardie · 1938</span></div>
+        <h3>The Middle Pillar</h3>
+        <p>A visualization exercise. Imagine a sphere of light at the crown, then draw it down the body's central line —
+        throat, heart, pelvis, feet — pausing at each to breathe and, in the traditional form, intone a divine name,
+        before circulating the light around the body.</p>
+        <div class="pc-does"><span class="h">What it actually does</span>A guided body-scan and breath meditation in
+        esoteric dress; reliably produces relaxation, warmth, and concentrated awareness.</div>
+        <div class="pc-src">Israel Regardie, The Middle Pillar (1938).</div>
+      </div>
+
+      <div class="pcard">
+        <div class="pc-top"><span class="pc-num">04</span><span class="pc-origin">Folk / contemporary</span></div>
+        <h3>Candle &amp; intention rite</h3>
+        <p>The simplest sympathetic practice. Phrase a single, concrete intention in the present tense; light a candle;
+        hold the intention clearly in mind while watching the flame; let the candle burn down safely (never unattended).</p>
+        <div class="pc-does"><span class="h">What it actually does</span>Externalises and sharpens an intention — close
+        to what psychologists call an “implementation intention.” The ritual frame can lower anxiety and reinforce
+        commitment, independent of any supernatural claim.</div>
+        <div class="pc-src">Widespread in contemporary practice; cf. research on ritual &amp; goal-setting.</div>
+      </div>
+
+      <div class="pcard">
+        <div class="pc-top"><span class="pc-num">05</span><span class="pc-origin">Dee &amp; Kelley · 1580s</span></div>
+        <h3>Scrying (contemplative gazing)</h3>
+        <p>The practice behind Dee and Kelley's sessions. In low light, gaze softly into a reflective surface — a dark
+        bowl of water, obsidian, or glass — without straining, letting the eyes relax and impressions arise.</p>
+        <div class="pc-does"><span class="h">What it actually does</span>Soft, unfocused gazing relaxes visual fixation
+        and can elicit drifting hypnagogic imagery — the documented mechanism behind “visions,” and a calming
+        attentional exercise.</div>
+        <div class="pc-src">Harkness, John Dee's Conversations with Angels (1999); perception research.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="refs" id="library">
+  <div class="wrap">
+    <h2>The library — verified &amp; reviewed</h2>
+    <div class="sub">Books, journal articles, and reputable web resources, tagged by source type</div>
+
+    <div class="callout" style="border-color:rgba(143,166,206,.3);border-left-color:var(--st-disp);background:rgba(143,166,206,.06);">
+      <b style="color:var(--st-disp);">How to read the tags</b>
+      <span class="tier sch">Scholarly</span> means an academic press or peer-reviewed work — the most reliable tier.
+      <span class="tier jrn">Journal</span> marks a peer-reviewed article or academic journal.
+      <span class="tier web">Web</span> marks a reputable but non-peer-reviewed site — useful for primary texts and orientation,
+      best cross-checked against the scholarly sources. Everything listed has been chosen for reliability; popular
+      “bloodline / NWO” content is deliberately excluded except as the object of study in the timeline.
+    </div>
+
+    <div class="ref-block">
+      <h3>Ancient roots — Mesopotamia, Egypt &amp; the Greco-Roman papyri</h3>
+      <ul class="ref-list">
+        <li>Francesca Rochberg, <em>In the Path of the Moon: Babylonian Celestial Divination and Its Legacy</em>. <span class="meta">Brill, 2010.</span><span class="tier sch">Scholarly</span></li>
+        <li>Hans Dieter Betz (ed.), <em>The Greek Magical Papyri in Translation, Including the Demotic Spells</em>. <span class="meta">University of Chicago Press, 1986 (2nd ed. 1992) — the standard PGM edition.</span><span class="tier sch">Scholarly</span></li>
+        <li>Christopher A. Faraone &amp; Sofía Torallas Tovar (eds.), <em>Greek and Egyptian Magical Formularies, vol. I</em>. <span class="meta">California Classical Studies, 2022 — current critical re-edition (GEMF).</span><span class="tier sch">Scholarly</span></li>
+        <li>Geraldine Pinch, <em>Magic in Ancient Egypt</em>. <span class="meta">British Museum Press / University of Texas Press, 1994.</span><span class="tier sch">Scholarly</span></li>
+      </ul>
+    </div>
+
+    <div class="ref-block">
+      <h3>The Hermetica &amp; the field</h3>
+      <ul class="ref-list">
+        <li>Brian P. Copenhaver, <em>Hermetica: The Greek Corpus Hermeticum and the Latin Asclepius</em>. <span class="meta">Cambridge University Press, 1992.</span><span class="tier sch">Scholarly</span></li>
+        <li>Florian Ebeling, <em>The Secret History of Hermes Trismegistus: Hermeticism from Ancient to Modern Times</em>. <span class="meta">Cornell University Press, 2007.</span><span class="tier sch">Scholarly</span></li>
+        <li>Wouter J. Hanegraaff, <em>Esotericism and the Academy: Rejected Knowledge in Western Culture</em>. <span class="meta">Cambridge University Press, 2012.</span><span class="tier sch">Scholarly</span></li>
+        <li>Antoine Faivre, <em>Access to Western Esotericism</em>. <span class="meta">SUNY Press, 1994.</span><span class="tier sch">Scholarly</span></li>
+        <li>Frances A. Yates, <em>Giordano Bruno and the Hermetic Tradition</em>. <span class="meta">University of Chicago Press, 1964 — foundational but substantially revised by later scholarship.</span><span class="tier sch">Scholarly</span></li>
+      </ul>
+    </div>
+
+    <div class="ref-block">
+      <h3>Arabic transmission, the Sabians &amp; the Picatrix</h3>
+      <ul class="ref-list">
+        <li>Kevin van Bladel, <em>The Arabic Hermes: From Pagan Sage to Prophet of Science</em>. <span class="meta">Oxford University Press, 2009.</span><span class="tier sch">Scholarly</span></li>
+        <li>David Pingree, “The Ṣābians of Ḥarrān and the Classical Tradition.” <span class="meta">International Journal of the Classical Tradition 9.1, 2002.</span><span class="tier jrn">Journal</span></li>
+        <li>David Pingree, “Between the Ghāya and Picatrix I: The Spanish Version.” <span class="meta">Journal of the Warburg and Courtauld Institutes 44, 1981.</span><span class="tier jrn">Journal</span></li>
+      </ul>
+    </div>
+
+    <div class="ref-block">
+      <h3>Grimoires &amp; John Dee</h3>
+      <ul class="ref-list">
+        <li>Owen Davies, <em>Grimoires: A History of Magic Books</em>. <span class="meta">Oxford University Press, 2009.</span><span class="tier sch">Scholarly</span></li>
+        <li>Deborah E. Harkness, <em>John Dee's Conversations with Angels: Cabala, Alchemy, and the End of Nature</em>. <span class="meta">Cambridge University Press, 1999.</span><span class="tier sch">Scholarly</span></li>
+        <li>Nicholas H. Clulee, <em>John Dee's Natural Philosophy: Between Science and Religion</em>. <span class="meta">Routledge, 1988.</span><span class="tier sch">Scholarly</span></li>
+        <li>György E. Szőnyi, <em>John Dee's Occultism: Magical Exaltation through Powerful Signs</em>. <span class="meta">SUNY Press, 2004.</span><span class="tier sch">Scholarly</span></li>
+        <li>Donald C. Laycock, <em>The Complete Enochian Dictionary</em>. <span class="meta">Weiser, rev. 1994 — sceptical linguistic analysis of “Enochian.”</span><span class="tier sch">Scholarly</span></li>
+      </ul>
+    </div>
+
+    <div class="ref-block">
+      <h3>Peer-reviewed journals &amp; articles</h3>
+      <ul class="ref-list">
+        <li><em>Aries: Journal for the Study of Western Esotericism</em>. <span class="meta">Brill — the principal peer-reviewed journal of the field.</span><span class="tier jrn">Journal</span></li>
+        <li><a href="https://correspondencesjournal.com/" target="_blank" rel="noopener"><em>Correspondences: Journal for the Study of Esotericism</em></a>. <span class="meta">Open-access, peer-reviewed.</span><span class="tier jrn">Journal</span></li>
+        <li>Wouter J. Hanegraaff, “Beyond the Yates Paradigm.” <span class="meta">Aries 1.1, 2001 — the standard critique of the Yates thesis.</span><span class="tier jrn">Journal</span></li>
+        <li>Teresa Burns, on the John Dee “007” legend. <span class="meta">Journal of the Western Mystery Tradition, 2010 — debunks the spy-signature myth.</span><span class="tier jrn">Journal</span></li>
+      </ul>
+    </div>
+
+    <div class="ref-block">
+      <h3>Reputable web resources &amp; primary-text archives</h3>
+      <ul class="ref-list">
+        <li><a href="https://www.esotericarchives.com/" target="_blank" rel="noopener">Twilit Grotto: Esoteric Archives</a> (J. H. Peterson) — meticulously edited Dee diaries, Enochian material, and grimoires.<span class="tier web">Web</span></li>
+        <li><a href="https://hermetic.com/" target="_blank" rel="noopener">The Hermetic Library</a> — large, long-running archive of Hermetic, Thelemic, and ceremonial-magic texts.<span class="tier web">Web</span></li>
+        <li><a href="https://sacred-texts.com/eso/" target="_blank" rel="noopener">Sacred-Texts: Esoteric &amp; Occult</a> — G. R. S. Mead's Hermetica and other public-domain editions.<span class="tier web">Web</span></li>
+        <li><a href="https://www.esswe.org/" target="_blank" rel="noopener">ESSWE</a> — the European Society for the Study of Western Esotericism; conferences, members, and resources.<span class="tier web">Web</span></li>
+        <li><a href="https://archive.org/" target="_blank" rel="noopener">Internet Archive</a> — scanned early editions of Agrippa, the Rosicrucian manifestos, Lévi, and more.<span class="tier web">Web</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="foot-note">
+      <strong>A note on method.</strong> This is a curated overview, not an exhaustive register, and dates for ancient
+      and medieval texts are scholarly estimates rather than fixed points. The labels exist to keep a real distinction
+      visible: the Hermetic tradition is a genuine, well-studied strand of intellectual history, while the modern
+      “Illuminati bloodline” and “New World Order” narratives that borrow its imagery have no evidentiary basis and
+      descend from a documented chain of fabrication — not from the sources catalogued here. Where history is uncertain,
+      it is marked <strong>disputed</strong>; where a specific claim has been disproven, <strong>debunked</strong>.
+    </p>
+    <div class="foot-meta">Compiled from peer-reviewed scholarship · Hermetic Chronology</div>
+  </div>
+</footer>
+
+<script>
+/* ---------------- data ---------------- */
+const ERAS = [
+  {id:"deepbackground",name:"Deep Background — Ancient Roots",  range:"3rd millennium BCE – 1st century CE"},
+  {id:"antiquity",   name:"Antiquity & Late Antiquity",       range:"c. 1st – 5th century CE"},
+  {id:"islamic",     name:"Islamic Golden Age & Transmission", range:"8th – 11th century"},
+  {id:"medieval",    name:"The Medieval Latin West",           range:"12th – 15th century"},
+  {id:"renaissance", name:"The Renaissance Revival",           range:"15th – 16th century"},
+  {id:"earlymodern", name:"The Early Modern Turn",             range:"17th – 18th century"},
+  {id:"revival",     name:"The Modern Occult Revival",         range:"19th – early 20th century"},
+  {id:"contemporary",name:"Contemporary Study & Afterlife",    range:"20th – 21st century"},
+];
+const ERA_ORDER = Object.fromEntries(ERAS.map((e,i)=>[e.id,i]));
+
+const ENTRIES = [
+  {y:-2400, era:"deepbackground", k:"documented", yr:"c. 2400 BCE",
+   t:"Egyptian heka and the Pyramid Texts",
+   d:"In Egypt, magic (heka) is understood not as transgression but as a divine creative force woven into the order of the cosmos. The Pyramid Texts — among the oldest religious writings known — inscribe ritual spells to guide and protect the dead: the deep substratum from which a later cult of “sacred Egypt” would grow.",
+   s:"Geraldine Pinch, Magic in Ancient Egypt (1994)."},
+
+  {y:-1550, era:"deepbackground", k:"documented", yr:"c. 1550 BCE",
+   t:"Thoth and the Egyptian Book of the Dead",
+   d:"New Kingdom funerary papyri — the “Book of Coming Forth by Day” — cast Thoth, god of writing, wisdom, and magic, as the divine scribe who records the judgment of the soul. Centuries later the Greeks would identify this very god with Hermes, producing “Hermes Trismegistus.”",
+   s:"Pinch, Magic in Ancient Egypt (1994)."},
+
+  {y:-1000, era:"deepbackground", k:"documented", yr:"early 2nd mill. – 7th c. BCE",
+   t:"Babylonian celestial divination",
+   d:"Mesopotamian scribes read the sky as a message from the gods, pairing each celestial event with a predicted outcome. The great omen series Enūma Anu Enlil — with roots in Old Babylonian observation such as the Venus Tablet of Ammiṣaduqa — is the ancestor of the astrology that later reached the Greek, Persian, and Islamic worlds.",
+   s:"Francesca Rochberg, In the Path of the Moon (2010)."},
+
+  {y:-500, era:"deepbackground", k:"documented", yr:"c. 6th–5th c. BCE",
+   t:"The Persian magi and the word “magic”",
+   d:"Greek writers borrow mageía from the magoi, the priestly class of Zoroastrian Persia — the etymological origin of the very word “magic.” From the start the term carries a double charge: revered foreign wisdom, and suspect foreign sorcery.",
+   s:"Classical scholarship on mageia (e.g. Bremmer, 1999)."},
+
+  {y:-450, era:"deepbackground", k:"documented", yr:"c. 5th c. BCE onward",
+   t:"Greeks meet Egypt: Thoth becomes Hermes",
+   d:"As Greeks travel in Egypt — Herodotus among them — and later rule it under the Ptolemies, they map their own gods onto Egyptian ones. Thoth is identified with Hermes: the interpretatio graeca that ultimately yields the composite sage Hermes Trismegistus.",
+   s:"van Bladel, The Arabic Hermes (2009); Ebeling (2007)."},
+
+  {y:-360, era:"deepbackground", k:"documented", yr:"c. 360 BCE",
+   t:"Plato's Timaeus and the living cosmos",
+   d:"Plato describes the cosmos as a single living being with a World-Soul, ordered by number and mirroring an eternal model. This Platonic substrate — the macrocosm reflected in the microcosm — becomes one of the deepest philosophical roots of later Hermetic and Neoplatonic thought.",
+   s:"History of philosophy; cf. Copenhaver, Hermetica (1992)."},
+
+  {y:-150, era:"deepbackground", k:"documented", yr:"2nd c. BCE – 5th c. CE",
+   t:"The Greek Magical Papyri",
+   d:"In Greco-Roman Egypt, working magicians compile practical handbooks of spells, hymns, and rituals in Greek, Demotic, and Coptic — freely invoking Hermes and Thoth together. The PGM are our richest surviving record of how ancient magic was actually performed.",
+   s:"H. D. Betz (ed.), The Greek Magical Papyri in Translation (1986/1992)."},
+
+  {y:-50, era:"antiquity", k:"documented", yr:"c. 1st c. CE",
+   t:"“Hermes Trismegistus” takes shape",
+   d:"The Greek god Hermes fuses with the Egyptian Thoth into a single legendary sage credited with primordial wisdom. Plutarch already refers to “Hermes Trismegistus” in the first century CE.",
+   s:"Copenhaver, Hermetica (1992); van Bladel, The Arabic Hermes (2009)."},
+
+  {y:200, era:"antiquity", k:"documented", yr:"c. 100–300 CE",
+   t:"The philosophical Hermetica are written in Roman Egypt",
+   d:"Anonymous authors in Hellenistic-Roman Alexandria compose the Greek treatises later gathered as the Corpus Hermeticum, blending Greek philosophy, Egyptian religion, and Jewish and early-Christian ideas, and teaching gnosis as the road to salvation.",
+   s:"Copenhaver, Hermetica (1992)."},
+
+  {y:350, era:"antiquity", k:"documented", yr:"3rd–4th c. CE",
+   t:"The Asclepius survives in Latin",
+   d:"While most Hermetica remained in Greek, the dialogue known as the Asclepius circulated in an early Latin translation through the Middle Ages, keeping a live thread of Hermetic thought inside the Christian West.",
+   s:"Copenhaver, Hermetica (1992); Hermetica (overview)."},
+
+  {y:450, era:"antiquity", k:"documented", yr:"5th c. CE",
+   t:"Stobaeus preserves the Hermetic excerpts",
+   d:"In Macedonia, John of Stobi (Stobaeus) compiles a vast anthology of Greek literature that conserves numerous Hermetic discourses — one of the key channels by which the texts survived at all.",
+   s:"Standard Hermetica scholarship."},
+
+  {y:800, era:"islamic", k:"documented", yr:"8th–9th c.",
+   t:"The Emerald Tablet appears in Arabic",
+   d:"The famous formula of correspondence — “as above, so below” in paraphrase — is first attested embedded in Arabic works such as the Book of the Secret of Creation attributed to Balīnās (Pseudo-Apollonius). Its legendary discovery in Hermes's tomb is myth, not history.",
+   s:"van Bladel, The Arabic Hermes (2009); Ebeling (2007)."},
+
+  {y:850, era:"islamic", k:"documented", yr:"9th c.",
+   t:"The Sabians of Harran carry Hermetic star-worship",
+   d:"A pagan community in northern Mesopotamia venerates Hermes as prophet and transmits planetary theurgy into the Islamic world — a crucial bridge from Hellenistic Egypt to Arabic learning.",
+   s:"Pingree, “The Ṣābians of Ḥarrān and the Classical Tradition” (2002)."},
+
+  {y:870, era:"islamic", k:"documented", yr:"c. 9th c.",
+   t:"Jābir ibn Ḥayyān and Hermetic alchemy",
+   d:"The enormous corpus attributed to Jābir (“Geber”) develops alchemical theory steeped in Hermetic ideas, shaping the discipline across the Islamic world and, later, Europe.",
+   s:"van Bladel (2009); standard history of alchemy."},
+
+  {y:1025, era:"islamic", k:"documented", yr:"c. 1000–1050",
+   t:"The Ghāyat al-Ḥakīm (Picatrix) is compiled in al-Andalus",
+   d:"A systematic Arabic manual of astral and talismanic magic gathers some two hundred sources — Hermetic, Sabian, and Neoplatonic. Its traditional attribution to Maslama al-Majrīṭī is now rejected by scholars as pseudepigraphy.",
+   s:"Pingree, “Between the Ghāya and Picatrix” (JWCI, 1981)."},
+
+  {y:1140, era:"medieval", k:"documented", yr:"12th c.",
+   t:"The Emerald Tablet enters Latin",
+   d:"Translations of Arabic science carry the Tabula Smaragdina into Europe, where its terse lines become a foundational reference for Latin alchemy for the next five centuries.",
+   s:"Ebeling (2007); history of alchemy."},
+
+  {y:1256, era:"medieval", k:"documented", yr:"1256",
+   t:"Picatrix translated for Alfonso X",
+   d:"The Ghāyat al-Ḥakīm is rendered into Castilian at the court of Alfonso X “the Wise,” and thence into Latin — the route by which Arabic astral magic reached Renaissance Europe.",
+   s:"Pingree (1981)."},
+
+  {y:1350, era:"medieval", k:"documented", yr:"13th–15th c.",
+   t:"The grimoire tradition takes shape",
+   d:"Latin manuals of ritual magic circulate in manuscript: the Sworn Book of Honorius, the Key of Solomon (Clavicula Salomonis), and the Munich Manual of Demonic Magic, weaving Solomonic, astrological, and Christian elements together.",
+   s:"Owen Davies, Grimoires: A History of Magic Books (2009)."},
+
+  {y:1460, era:"renaissance", k:"documented", yr:"1460",
+   t:"A Hermetic manuscript reaches Florence",
+   d:"Leonardo da Pistoia, an agent of Cosimo de' Medici, brings a Greek codex of the Corpus Hermeticum back from Macedonia — the spark for the Renaissance recovery of Hermes.",
+   s:"Hermeticism (overview); Yates (1964)."},
+
+  {y:1463, era:"renaissance", k:"documented", yr:"1463",
+   t:"Ficino translates the Corpus Hermeticum",
+   d:"Cosimo de' Medici orders Marsilio Ficino to set Plato aside and translate the Hermetica first. Ficino takes them for a “pristine theology” older than Moses — a belief that ignites Renaissance Hermeticism.",
+   s:"Copenhaver (1992); Yates (1964)."},
+
+  {y:1486, era:"renaissance", k:"documented", yr:"1486",
+   t:"Pico fuses Hermeticism, Kabbalah and magic",
+   d:"Giovanni Pico della Mirandola's Oration on the Dignity of Man and 900 Theses braid Hermetic and Jewish-Kabbalistic strands into a Christian frame, founding the current later called Christian Kabbalah.",
+   s:"Yates (1964); Hanegraaff (2012)."},
+
+  {y:1531, era:"renaissance", k:"documented", yr:"1531–33",
+   t:"Agrippa's Three Books of Occult Philosophy",
+   d:"Heinrich Cornelius Agrippa systematises natural, celestial, and ceremonial magic into the single most influential occult encyclopedia of the era, printed after years in manuscript.",
+   s:"Davies (2009); standard scholarship."},
+
+  {y:1564, era:"renaissance", k:"documented", yr:"1564",
+   t:"John Dee writes the Monas Hieroglyphica",
+   d:"Dee designs a single glyph meant to encode the unity of all creation, dedicating the dense Kabbalistic-alchemical work to the Holy Roman Emperor Maximilian II in a bid for patronage.",
+   s:"Clulee (1988); Szőnyi (2004)."},
+
+  {y:1583, era:"renaissance", k:"documented", yr:"1582–1589",
+   t:"Dee and Kelley's angelic conversations",
+   d:"With the scryer Edward Kelley, Dee records years of crystal-gazing sessions that produce “Enochian,” a purported angelic language with its own alphabet and tables. Reception began on 26 March 1583.",
+   s:"Harkness, John Dee's Conversations with Angels (1999)."},
+
+  {y:1600, era:"renaissance", k:"documented", yr:"1600",
+   t:"Giordano Bruno burned at the stake",
+   d:"The philosopher and cosmologist is executed by the Roman Inquisition. Yates later cast him as a Hermetic magus driven by Renaissance occultism — a reading scholars now heavily qualify.",
+   s:"Yates (1964); later critical scholarship."},
+
+  {y:1614, era:"earlymodern", k:"debunked", yr:"1614",
+   t:"Casaubon redates the Hermetica",
+   d:"The Swiss philologist Isaac Casaubon shows on linguistic grounds that the Hermetic texts belong to the early Common Era, not deepest Egyptian antiquity — disproving the claim, central to Renaissance Hermeticism, that they predate Moses.",
+   s:"Grafton; Hermeticism scholarship."},
+
+  {y:1615, era:"earlymodern", k:"disputed", yr:"1614–1616",
+   t:"The Rosicrucian manifestos appear",
+   d:"The Fama Fraternitatis (1614), Confessio (1615), and Chymical Wedding of Christian Rosenkreutz (1616) announce a hidden brotherhood. The Chymical Wedding is credited to Johann Valentin Andreae, and scholars largely read the manifestos as allegory rather than the record of a real ancient order.",
+   s:"Hanegraaff (2012); Rosicrucian scholarship."},
+
+  {y:1685, era:"earlymodern", k:"documented", yr:"late 17th c.",
+   t:"Newton's hidden alchemy",
+   d:"Isaac Newton privately writes hundreds of thousands of words on alchemy and Hermetic interpretation. Keynes later called him “the last of the magicians,” complicating any tidy story of a purely rational Scientific Revolution.",
+   s:"Newton Project; history of science."},
+
+  {y:1776, era:"earlymodern", k:"documented", yr:"1776",
+   t:"The (real) Bavarian Illuminati is founded",
+   d:"Adam Weishaupt founds a rationalist, anti-clerical secret society in Ingolstadt, Bavaria. It is banned by edict and effectively dissolved by the mid-1780s — its brief, real history later inflated into a sprawling conspiracy myth it never supported.",
+   s:"Standard 18th-c. historiography."},
+
+  {y:1855, era:"revival", k:"documented", yr:"1854–1856",
+   t:"Éliphas Lévi revives ritual magic",
+   d:"The French occultist's Dogme et Rituel de la Haute Magie links the Tarot to the Kabbalistic Tree of Life and reintroduces ceremonial magic to a modern audience, seeding the revival that followed.",
+   s:"Hanegraaff (2012); history of occultism."},
+
+  {y:1875, era:"revival", k:"documented", yr:"1875",
+   t:"The Theosophical Society is founded",
+   d:"Helena Blavatsky and Henry Olcott launch a movement synthesising Western esotericism with Eastern religion, shaping a century of occult, metaphysical, and later New Age thought.",
+   s:"Hanegraaff (2012)."},
+
+  {y:1888, era:"revival", k:"documented", yr:"1888",
+   t:"The Hermetic Order of the Golden Dawn",
+   d:"Westcott, Mathers, and Woodman found the Isis-Urania Temple in London, assembling Hermetic Kabbalah, Tarot, astrology, alchemy, and Enochian magic into the most influential modern magical system — and admitting women as equals.",
+   s:"Britannica; Golden Dawn histories."},
+
+  {y:1888.5, era:"revival", k:"debunked", yr:"1888",
+   t:"The Golden Dawn's fabricated charter",
+   d:"The order's claimed authorisation by a German adept, “Anna Sprengel,” and the ancient lineage it implied are now widely judged a fabrication — most likely by Westcott himself, who used it to lend the new order authority.",
+   s:"Multiple Golden Dawn histories."},
+
+  {y:1904, era:"revival", k:"documented", yr:"1904",
+   t:"Crowley receives The Book of the Law",
+   d:"In Cairo, Aleister Crowley records the founding text of Thelema, with its maxim “Do what thou wilt.” He builds a complete magical-religious system around it over the following decades.",
+   s:"Standard Crowley scholarship."},
+
+  {y:1909, era:"revival", k:"documented", yr:"1909",
+   t:"The Rider–Waite–Smith Tarot",
+   d:"Golden Dawn members A. E. Waite and the artist Pamela Colman Smith publish the deck that becomes the template for nearly all modern Tarot.",
+   s:"Tarot historiography."},
+
+  {y:1964, era:"contemporary", k:"disputed", yr:"1964",
+   t:"Yates's Giordano Bruno and the Hermetic Tradition",
+   d:"Frances Yates argues that Renaissance Hermeticism helped give birth to modern science. The bold “Yates thesis” galvanises the field, but later scholars (Copenhaver, Westman, Hanegraaff) substantially criticise and qualify it.",
+   s:"Yates (1964); Westman & McGuire (1977); Hanegraaff (2001)."},
+
+  {y:1968, era:"contemporary", k:"debunked", yr:"1968",
+   t:"The John Dee “007” hoax is born",
+   d:"Writing as “Richard Deacon,” journalist Donald McCormick casts Dee as Elizabeth I's secret agent who signed letters with a stylised “007.” Scholar Teresa Burns (2010) and rare-books librarian Katie Birkwood find no such signatures — the claim is an invention.",
+   s:"Burns (2010); University of Cambridge / RCP."},
+
+  {y:1994, era:"contemporary", k:"documented", yr:"1994",
+   t:"Laycock's sceptical analysis of Enochian",
+   d:"The linguist Donald Laycock concludes that Dee and Kelley's “angelic language” lacks the features of a natural language and patterns more like glossolalia — undercutting claims of a supernatural origin.",
+   s:"Laycock, The Complete Enochian Dictionary (1994)."},
+
+  {y:1999, era:"contemporary", k:"documented", yr:"1979 · 1999",
+   t:"Esotericism becomes an academic field",
+   d:"Antoine Faivre's chair at the Sorbonne (1979) and Wouter Hanegraaff's chair in the History of Hermetic Philosophy at the University of Amsterdam (1999) establish Western esotericism as a rigorous, peer-reviewed discipline rather than a fringe interest.",
+   s:"Hanegraaff, Esotericism and the Academy (2012)."},
+
+  {y:2020, era:"contemporary", k:"conspiracy", yr:"20th–21st c.",
+   t:"Hermetic motifs absorbed into conspiracy culture",
+   d:"Occult and Hermetic imagery — the all-seeing eye, “Illuminati” symbolism — is recycled into modern theories about secret world control. These “bloodline” and “New World Order” narratives have no evidentiary basis and descend from a documented chain of fabrication, distinct from the historical Hermetic tradition itself.",
+   s:"Shown as discourse; see method note."},
+
+  {y:300, era:"antiquity", k:"documented", yr:"c. 300 CE",
+   t:"Zosimos of Panopolis and Greek alchemy",
+   d:"The earliest substantial named alchemical author, writing in Greco-Roman Egypt, frames the transmutation of metals as a spiritual as well as material work — fusing laboratory practice with visionary allegory and Hermetic ideas, and setting the template for alchemy for over a millennium.",
+   s:"History of alchemy; cf. Pinch (1994); Ebeling (2007)."},
+
+  {y:1536, era:"renaissance", k:"documented", yr:"1530s",
+   t:"Paracelsus reforms alchemy and medicine",
+   d:"The Swiss physician Theophrastus von Hohenheim (Paracelsus) turns alchemy toward healing, proposing the tria prima of salt, sulphur, and mercury and an iatrochemical medicine that would shape early modern science and the later occult revival alike.",
+   s:"Standard history of science and alchemy."},
+
+  {y:1640, era:"earlymodern", k:"documented", yr:"17th c.",
+   t:"The Lemegeton (Lesser Key of Solomon)",
+   d:"A famous grimoire compilation assembled in the seventeenth century gathers earlier Solomonic material, including the Ars Goetia catalogue of spirits. It crystallises the late grimoire tradition that the modern magical orders would inherit and rework.",
+   s:"Owen Davies, Grimoires: A History of Magic Books (2009)."},
+];
+
+/* ---------------- state + render ---------------- */
+const state = {
+  q:"",
+  era:"all",
+  statuses:new Set(["documented","disputed","debunked","conspiracy"]),
+};
+const STAG = {documented:"doc",disputed:"disp",debunked:"deb",conspiracy:"con"};
+
+const tl = document.getElementById("tl");
+const countEl = document.getElementById("count");
+let observer = null;
+
+function esc(s){return s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+
+function passes(e){
+  if(!state.statuses.has(e.k)) return false;
+  if(state.era!=="all" && e.era!==state.era) return false;
+  if(state.q){
+    const hay=(e.t+" "+e.d+" "+e.yr+" "+e.s).toLowerCase();
+    if(!hay.includes(state.q)) return false;
+  }
+  return true;
+}
+
+function render(){
+  const items=ENTRIES.filter(passes).sort((a,b)=>{
+    const ea=ERA_ORDER[a.era]-ERA_ORDER[b.era];
+    return ea!==0?ea:a.y-b.y;
+  });
+  countEl.textContent = items.length + " of " + ENTRIES.length + " entries";
+
+  if(items.length===0){
+    tl.innerHTML='<div class="empty"><b>No entries match these filters.</b> Try clearing the search or re-enabling a status above.</div>';
+    return;
+  }
+
+  let html="", lastEra=null;
+  for(const e of items){
+    if(e.era!==lastEra){
+      const era=ERAS.find(x=>x.id===e.era);
+      html+='<section class="era"><h2 class="era-name">'+esc(era.name)+'</h2><div class="era-range">'+esc(era.range)+'</div></section>';
+      lastEra=e.era;
+    }
+    const tag=STAG[e.k];
+    html+=''
+      +'<article class="entry" data-k="'+e.k+'">'
+      +'<div class="card">'
+      +'<div class="card-head"><span class="yr">'+esc(e.yr)+'</span>'
+      +'<span class="tag '+tag+'">'+e.k+'</span></div>'
+      +'<h3>'+esc(e.t)+'</h3>'
+      +'<p>'+esc(e.d)+'</p>'
+      +'<div class="src">'+esc(e.s)+'</div>'
+      +'</div></article>';
+  }
+  tl.innerHTML=html;
+  observeReveal();
+}
+
+function observeReveal(){
+  if(!document.body.classList.contains("js")) return;
+  if(observer) observer.disconnect();
+  const reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const targets=tl.querySelectorAll(".entry, .era");
+  if(reduce){ targets.forEach(t=>t.classList.add("in-view")); return; }
+  observer=new IntersectionObserver((entries)=>{
+    entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add("in-view"); observer.unobserve(en.target);} });
+  },{rootMargin:"0px 0px -8% 0px",threshold:0.05});
+  targets.forEach(t=>observer.observe(t));
+}
+
+/* ---------------- controls wiring ---------------- */
+function buildEraSelect(){
+  const sel=document.getElementById("era");
+  ERAS.forEach(e=>{
+    const o=document.createElement("option");
+    o.value=e.id; o.textContent=e.name;
+    sel.appendChild(o);
+  });
+  sel.addEventListener("change",()=>{state.era=sel.value;render();});
+}
+
+document.getElementById("q").addEventListener("input",ev=>{
+  state.q=ev.target.value.trim().toLowerCase(); render();
+});
+
+document.getElementById("chips").addEventListener("click",ev=>{
+  const chip=ev.target.closest(".chip"); if(!chip) return;
+  const k=chip.dataset.k;
+  if(state.statuses.has(k)){ state.statuses.delete(k); chip.setAttribute("aria-pressed","false"); chip.classList.add("off"); }
+  else { state.statuses.add(k); chip.setAttribute("aria-pressed","true"); chip.classList.remove("off"); }
+  render();
+});
+
+document.getElementById("reset").addEventListener("click",()=>{
+  state.q=""; state.era="all";
+  state.statuses=new Set(["documented","disputed","debunked","conspiracy"]);
+  document.getElementById("q").value="";
+  document.getElementById("era").value="all";
+  document.querySelectorAll(".chip").forEach(c=>{c.setAttribute("aria-pressed","true");c.classList.remove("off");});
+  render();
+});
+
+/* ---------------- init ---------------- */
+document.body.classList.add("js");
+buildEraSelect();
+render();
+</script>
+</body>
+</html>
