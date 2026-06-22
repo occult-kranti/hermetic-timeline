@@ -11,11 +11,16 @@ Every entry carries an **epistemic label** — *documented*, *disputed*, *debunk
 
 | File | Purpose |
 |------|---------|
-| `index.html` | The entire site — self-contained HTML, CSS, and JavaScript. No build step, no dependencies. |
-| `.nojekyll` | Tells GitHub Pages to skip Jekyll processing and serve the file as-is. |
+| `index.html` | Home — the interactive timeline, plus an "Explore further" hub. |
+| `alchemy.html` | The alchemy deep dive (the magnum opus, materials, and adepts). |
+| `rituals.html` | Six honestly-framed starter rituals. |
+| `field-guide.html` | Magic organised by material, purpose, and reported timeframe. |
+| `library.html` | Books, journals, and web archives, tagged by reliability. |
+| `styles.css` | Shared design system used by every page. |
+| `.nojekyll` | Tells GitHub Pages to skip Jekyll processing and serve files as-is. |
 | `README.md` | This file. |
 
-The page loads two web fonts from Google Fonts; everything else is inline, so it works offline too (fonts just fall back to system serifs).
+All pages link `styles.css` and cross-link with relative paths, so the whole site works as a folder — locally or on GitHub Pages. Each page loads two web fonts from Google Fonts; everything else is local.
 
 ## Deploy it on GitHub Pages
 
