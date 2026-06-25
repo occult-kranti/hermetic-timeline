@@ -13,7 +13,8 @@ Every entry carries an **epistemic label** — *documented*, *disputed*, *debunk
 |------|---------|
 | `index.html` | Home — the interactive timeline, plus an "Explore further" hub. |
 | `alchemy.html` | The alchemy deep dive (the magnum opus, materials, and adepts). |
-| `rituals.html` | Six honestly-framed starter rituals. |
+| `rituals.html` | Six honestly-framed starter rituals (modern ceremonial magic). |
+| `hermetica.html` | The genuine ancient Hermetic contemplative practices, step by step. |
 | `field-guide.html` | Magic organised by material, purpose, and reported timeframe. |
 | `library.html` | Books, journals, and web archives, tagged by reliability. |
 | `styles.css` | Shared design system used by every page. |
